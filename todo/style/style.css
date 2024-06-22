@@ -1,0 +1,217 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* @font-face {
+  font-family: Josefin Sans;
+  src: url(https://fonts.google.com/specimen/Josefin+Sans);
+} */
+
+:root {
+  --dark: hsl(235, 21%, 11%);
+  --dark-todo: hsl(235, 24%, 19%);
+  --chek: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  --color: #f5f5f5;
+}
+
+.top-img {
+  background-image: url(../images/bg-desktop-dark.jpg);
+  width: 100%;
+  height: 40vh;
+  min-height: 15rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  z-index: 0;
+}
+
+main {
+  background-color: var(--dark);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain {
+  z-index: 100;
+  margin-top: 10vh;
+  padding-bottom: 20vh;
+  width: 30rem;
+}
+
+.top-cntain {
+  display: flex;
+  justify-content: space-between;
+  height: 2rem;
+}
+
+.top-cntain img {
+  width: 2rem;
+  cursor: pointer;
+}
+
+.top-cntain h1 {
+  color: whitesmoke;
+  font-family: Josefin Sans, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1rem;
+}
+
+.inp {
+  border-radius: 1rem;
+  width: 100%;
+  background-color: var(--dark-todo);
+  margin: 3rem 0;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.chek {
+  width: 24px;
+  border-radius: 50%;
+  margin: 0.7rem;
+  height: 24px;
+  /* background: var(--chek); */
+  border: 2px solid rgb(65, 62, 62);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  padding: 0.5rem 0.5rem;
+  width: 85%;
+  margin: 0 auto;
+  outline: none;
+  border: none;
+  background: var(--dark-todo);
+  color: var(--color);
+  font-size: 1.2rem;
+  font-family: cursive;
+  letter-spacing: 0.1rem;
+}
+
+.input::placeholder {
+  letter-spacing: 0.1rem;
+  font-family: Josefin Sans, sans-serif;
+  font-weight: 400;
+}
+
+.inp-todo p {
+  color: var(--color);
+  font-family: cursive;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  margin: 1rem;
+}
+
+.inp-todo:first-child {
+  border-radius: 1rem 1rem 0 0 !important;
+}
+
+.inp-todo {
+  width: 100%;
+  background-color: var(--dark-todo);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color);
+}
+
+.btm-content {
+  background: var(--dark-todo);
+  list-style: none;
+  font-family: cursive;
+  display: none;
+  justify-content: space-between;
+  color: rgb(83, 83, 83);
+  font-size: 0.8rem;
+  padding: 1rem;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.btm-content ul {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  list-style: none;
+}
+
+.btm-content ul li {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btm-content ul li:hover {
+  color: hsl(235, 22%, 78%);
+}
+
+.focus {
+  color: hsl(235, 79%, 55%);
+}
+
+#delComp {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#delComp:hover {
+  color: hsl(235, 22%, 78%);
+}
+
+.todoP {
+  cursor: pointer;
+}
+
+.ull {
+  display: flex;
+}
+
+.mm {
+  background: var(--dark-todo);
+  height: 2rem;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 1rem;
+  align-items: center;
+  display: none;
+}
+
+.mm ul {
+  height: 2rem;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 1rem;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.mm ul li {
+  width: 33%;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px){
+  html {
+    font-size: 12px;
+  }
+
+  .contain {
+    width: 90%;
+  }
+
+  .ull {
+    display: none !important;
+  }
+
+  .mm {
+    display: block;
+  }
+}
