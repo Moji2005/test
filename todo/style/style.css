@@ -175,7 +175,7 @@ main {
 
 .mm {
   background: var(--dark-todo);
-  height: 2rem;
+  height: 3rem;
   display: flex;
   justify-content: space-around;
   border-radius: 1rem;
@@ -184,7 +184,7 @@ main {
 }
 
 .mm ul {
-  height: 2rem;
+  height: 3rem;
   display: flex;
   justify-content: space-around;
   border-radius: 1rem;
